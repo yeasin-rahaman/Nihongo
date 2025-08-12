@@ -8,11 +8,11 @@ function App() {
     <div className="App">
       <div className="row container text-center">
 
-        <div className='col-12'>
+        <div className='col-12 my-5'>
           <div> <h1>Katakana</h1>
             <Katakana></Katakana></div>
         </div>
-        <div className='col-12'>
+        <div className='col-12 my-5'>
           <div>
             <h1>Hiragana</h1>
             <Hiragana></Hiragana>
