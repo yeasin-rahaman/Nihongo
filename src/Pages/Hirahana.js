@@ -8,6 +8,7 @@ import { EffectCards } from 'swiper/modules';
 
 const Hiragana = () => {
     const hiragana = [
+        // Basic 46
         { kana: "あ", romaji: "a" },
         { kana: "い", romaji: "i" },
         { kana: "う", romaji: "u" },
@@ -53,8 +54,73 @@ const Hiragana = () => {
         { kana: "ろ", romaji: "ro" },
         { kana: "わ", romaji: "wa" },
         { kana: "を", romaji: "wo" },
-        { kana: "ん", romaji: "n" }
+        { kana: "ん", romaji: "n" },
+
+        // Dakuten (voiced sounds)
+        { kana: "が", romaji: "ga" },
+        { kana: "ぎ", romaji: "gi" },
+        { kana: "ぐ", romaji: "gu" },
+        { kana: "げ", romaji: "ge" },
+        { kana: "ご", romaji: "go" },
+        { kana: "ざ", romaji: "za" },
+        { kana: "じ", romaji: "ji" },
+        { kana: "ず", romaji: "zu" },
+        { kana: "ぜ", romaji: "ze" },
+        { kana: "ぞ", romaji: "zo" },
+        { kana: "だ", romaji: "da" },
+        { kana: "ぢ", romaji: "ji" },  // rare
+        { kana: "づ", romaji: "zu" },  // rare
+        { kana: "で", romaji: "de" },
+        { kana: "ど", romaji: "do" },
+        { kana: "ば", romaji: "ba" },
+        { kana: "び", romaji: "bi" },
+        { kana: "ぶ", romaji: "bu" },
+        { kana: "べ", romaji: "be" },
+        { kana: "ぼ", romaji: "bo" },
+
+        // Handakuten (p sounds)
+        { kana: "ぱ", romaji: "pa" },
+        { kana: "ぴ", romaji: "pi" },
+        { kana: "ぷ", romaji: "pu" },
+        { kana: "ぺ", romaji: "pe" },
+        { kana: "ぽ", romaji: "po" },
+
+        // Yōon (combined sounds)
+        { kana: "きゃ", romaji: "kya" },
+        { kana: "きゅ", romaji: "kyu" },
+        { kana: "きょ", romaji: "kyo" },
+        { kana: "しゃ", romaji: "sha" },
+        { kana: "しゅ", romaji: "shu" },
+        { kana: "しょ", romaji: "sho" },
+        { kana: "ちゃ", romaji: "cha" },
+        { kana: "ちゅ", romaji: "chu" },
+        { kana: "ちょ", romaji: "cho" },
+        { kana: "にゃ", romaji: "nya" },
+        { kana: "にゅ", romaji: "nyu" },
+        { kana: "にょ", romaji: "nyo" },
+        { kana: "ひゃ", romaji: "hya" },
+        { kana: "ひゅ", romaji: "hyu" },
+        { kana: "ひょ", romaji: "hyo" },
+        { kana: "みゃ", romaji: "mya" },
+        { kana: "みゅ", romaji: "myu" },
+        { kana: "みょ", romaji: "myo" },
+        { kana: "りゃ", romaji: "rya" },
+        { kana: "りゅ", romaji: "ryu" },
+        { kana: "りょ", romaji: "ryo" },
+        { kana: "ぎゃ", romaji: "gya" },
+        { kana: "ぎゅ", romaji: "gyu" },
+        { kana: "ぎょ", romaji: "gyo" },
+        { kana: "じゃ", romaji: "ja" },
+        { kana: "じゅ", romaji: "ju" },
+        { kana: "じょ", romaji: "jo" },
+        { kana: "びゃ", romaji: "bya" },
+        { kana: "びゅ", romaji: "byu" },
+        { kana: "びょ", romaji: "byo" },
+        { kana: "ぴゃ", romaji: "pya" },
+        { kana: "ぴゅ", romaji: "pyu" },
+        { kana: "ぴょ", romaji: "pyo" },
     ];
+
 
     const [slides] = useState(() =>
         Array.from({ length: 10 }, () => {

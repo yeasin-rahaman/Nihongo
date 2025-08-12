@@ -10,6 +10,7 @@ import { EffectCards } from 'swiper/modules';
 
 const Katakana = () => {
     const katakana = [
+        // Basic 46
         { kana: "ア", romaji: "a" },
         { kana: "イ", romaji: "i" },
         { kana: "ウ", romaji: "u" },
@@ -55,7 +56,71 @@ const Katakana = () => {
         { kana: "ロ", romaji: "ro" },
         { kana: "ワ", romaji: "wa" },
         { kana: "ヲ", romaji: "wo" },
-        { kana: "ン", romaji: "n" }
+        { kana: "ン", romaji: "n" },
+
+        // Dakuten (voiced)
+        { kana: "ガ", romaji: "ga" },
+        { kana: "ギ", romaji: "gi" },
+        { kana: "グ", romaji: "gu" },
+        { kana: "ゲ", romaji: "ge" },
+        { kana: "ゴ", romaji: "go" },
+        { kana: "ザ", romaji: "za" },
+        { kana: "ジ", romaji: "ji" },
+        { kana: "ズ", romaji: "zu" },
+        { kana: "ゼ", romaji: "ze" },
+        { kana: "ゾ", romaji: "zo" },
+        { kana: "ダ", romaji: "da" },
+        { kana: "ヂ", romaji: "ji" }, // rare
+        { kana: "ヅ", romaji: "zu" }, // rare
+        { kana: "デ", romaji: "de" },
+        { kana: "ド", romaji: "do" },
+        { kana: "バ", romaji: "ba" },
+        { kana: "ビ", romaji: "bi" },
+        { kana: "ブ", romaji: "bu" },
+        { kana: "ベ", romaji: "be" },
+        { kana: "ボ", romaji: "bo" },
+
+        // Handakuten (p sounds)
+        { kana: "パ", romaji: "pa" },
+        { kana: "ピ", romaji: "pi" },
+        { kana: "プ", romaji: "pu" },
+        { kana: "ペ", romaji: "pe" },
+        { kana: "ポ", romaji: "po" },
+
+        // Yōon (combo sounds)
+        { kana: "キャ", romaji: "kya" },
+        { kana: "キュ", romaji: "kyu" },
+        { kana: "キョ", romaji: "kyo" },
+        { kana: "シャ", romaji: "sha" },
+        { kana: "シュ", romaji: "shu" },
+        { kana: "ショ", romaji: "sho" },
+        { kana: "チャ", romaji: "cha" },
+        { kana: "チュ", romaji: "chu" },
+        { kana: "チョ", romaji: "cho" },
+        { kana: "ニャ", romaji: "nya" },
+        { kana: "ニュ", romaji: "nyu" },
+        { kana: "ニョ", romaji: "nyo" },
+        { kana: "ヒャ", romaji: "hya" },
+        { kana: "ヒュ", romaji: "hyu" },
+        { kana: "ヒョ", romaji: "hyo" },
+        { kana: "ミャ", romaji: "mya" },
+        { kana: "ミュ", romaji: "myu" },
+        { kana: "ミョ", romaji: "myo" },
+        { kana: "リャ", romaji: "rya" },
+        { kana: "リュ", romaji: "ryu" },
+        { kana: "リョ", romaji: "ryo" },
+        { kana: "ギャ", romaji: "gya" },
+        { kana: "ギュ", romaji: "gyu" },
+        { kana: "ギョ", romaji: "gyo" },
+        { kana: "ジャ", romaji: "ja" },
+        { kana: "ジュ", romaji: "ju" },
+        { kana: "ジョ", romaji: "jo" },
+        { kana: "ビャ", romaji: "bya" },
+        { kana: "ビュ", romaji: "byu" },
+        { kana: "ビョ", romaji: "byo" },
+        { kana: "ピャ", romaji: "pya" },
+        { kana: "ピュ", romaji: "pyu" },
+        { kana: "ピョ", romaji: "pyo" },
     ];
 
     // Generate 10 random katakana pairs once on mount
