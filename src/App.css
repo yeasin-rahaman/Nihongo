@@ -1,38 +1,70 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  /* centers horizontally */
+  align-items: center;
+  /* centers vertically */
+  min-height: 100vh;
+  /* full viewport height */
+  overflow: hidden;
+  /* removes overflow */
+  padding: 20px;
+  /* optional, some spacing */
+  box-sizing: border-box;
+}
+
+.swiper {
+  width: 240px;
+  height: 320px;
+}
+
+.swiper-slide {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+/* Gradient backgrounds per slide with 3+ colors */
+.swiper-slide:nth-child(1n) {
+  background: linear-gradient(135deg, #ce1111, #ff4e42, #ff6e54);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.swiper-slide:nth-child(2n) {
+  background: linear-gradient(135deg, #008cff, #00b0ff, #55ccff);
+}
+
+.swiper-slide:nth-child(3n) {
+  background: linear-gradient(135deg, #0ab86f, #4de8a2, #76d4b8);
+}
+
+.swiper-slide:nth-child(4n) {
+  background: linear-gradient(135deg, #d37a07, #f1b24a, #f5d56a);
+}
+
+.swiper-slide:nth-child(5n) {
+  background: linear-gradient(135deg, #76a30c, #add93a, #c6e25f);
+}
+
+.swiper-slide:nth-child(6n) {
+  background: linear-gradient(135deg, #b40a2f, #e93d60, #f26f85);
+}
+
+.swiper-slide:nth-child(7n) {
+  background: linear-gradient(135deg, #236313, #679a3f, #8ebe62);
+}
+
+.swiper-slide:nth-child(8n) {
+  background: linear-gradient(135deg, #0044ff, #4a6cff, #7491ff);
+}
+
+.swiper-slide:nth-child(9n) {
+  background: linear-gradient(135deg, #da0cda, #f25aff, #f78ffb);
+}
+
+.swiper-slide:nth-child(10n) {
+  background: linear-gradient(135deg, #365e4d, #6a927a, #8baf94);
 }
