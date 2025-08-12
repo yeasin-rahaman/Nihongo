@@ -120,7 +120,11 @@ const Hiragana = () => {
         { kana: "ぴゅ", romaji: "pyu" },
         { kana: "ぴょ", romaji: "pyo" },
     ];
-
+    const speakText = (text) => {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = "ja-JP"; // Japanese voice
+        speechSynthesis.speak(utterance);
+    };
 
     const [slides] = useState(() =>
         Array.from({ length: 10 }, () => {
@@ -170,11 +174,35 @@ const Hiragana = () => {
                             }}
                         >
                             <span>{item.kana}</span>
+
+
+
+
                             {showRomaji && activeIndex === index && (
                                 <span style={{ fontSize: '20px', marginTop: '10px' }}>
                                     {item.romaji}
+                                    <br />
+
+                                    <button
+                                        style={{
+                                            marginTop: "10px",
+                                            padding: "5px 10px",
+                                            border: "none",
+                                            borderRadius: "8px",
+                                            background: "rgba(255,255,255,0.2)",
+                                            color: "#fff",
+                                            cursor: "pointer",
+                                            backdropFilter: "blur(5px)"
+                                        }}
+                                        onClick={() => speakText(item.kana)}
+                                    >
+                                        🔊 Play
+                                    </button>
                                 </span>
+
+
                             )}
+
                         </div>
                     </SwiperSlide>
                 ))}
