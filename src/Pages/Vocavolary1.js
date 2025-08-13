@@ -168,7 +168,7 @@ const Katakana = () => {
                                 flexDirection: 'column',
                                 alignItems: 'center',
                                 justifyContent: 'center',
-                                height: '260px',
+
                                 padding: 8,
                                 textAlign: 'center',
                                 fontSize: "11px"

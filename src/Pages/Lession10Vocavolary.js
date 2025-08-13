@@ -155,7 +155,7 @@ const Katakana = () => {
     return (
         <div className='text-center '>
             <h1 className=''>Vocabulary 10</h1>
-            <div style={{ width: '320px', margin: 'auto', position: 'relative' }} className='mt-5'>
+            <div style={{ margin: 'auto', position: 'relative' }} className='mt-5'>
                 {!ttsEnabled && (
                     <button
                         onClick={() => {
