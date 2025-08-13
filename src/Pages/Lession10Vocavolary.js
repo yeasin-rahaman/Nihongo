@@ -9,7 +9,7 @@ import 'swiper/css/effect-cards';
 // Swiper module
 import { EffectCards } from 'swiper/modules';
 
-const Katakana = () => {
+const Lession10Vocavolary = () => {
     const vocabulary = [
         { id: 1, japanese: "こんにちは", romaji: "Konnichiwa", english: "Hello / Good afternoon", image: "/src/img/v1/Placeholder-_-Glossary.svg" },
         { id: 2, japanese: "おはようございます", romaji: "Ohayou gozaimasu", english: "Good morning", image: "/src/img/v1/Placeholder-_-Glossary.svg" },
@@ -80,4 +80,4 @@ const Katakana = () => {
     );
 };
 
-export default Katakana;
+export default Lession10Vocavolary;
