@@ -153,70 +153,73 @@ const Katakana = () => {
     }, [ttsEnabled]);
 
     return (
-        <div style={{ width: '320px', margin: 'auto', position: 'relative' }}>
-            {!ttsEnabled && (
-                <button
-                    onClick={() => {
-                        // A user gesture to unlock audio/speech on most browsers
-                        setTtsEnabled(true);
-                    }}
-                    style={{
-                        position: 'absolute',
-                        zIndex: 10,
-                        top: 8,
-                        right: 8,
-                        padding: '8px 12px',
-                        borderRadius: 12,
-                        border: 'none',
-                        boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
-                        cursor: 'pointer'
-                    }}
-                    title="Enable speech"
-                >
-                    🔊 Enable Speech
-                </button>
-            )}
+        <div className='text-center '>
+            <h1 className=''>Vocabulary 10</h1>
+            <div style={{ width: '320px', margin: 'auto', position: 'relative' }} className='mt-5'>
+                {!ttsEnabled && (
+                    <button
+                        onClick={() => {
+                            // A user gesture to unlock audio/speech on most browsers
+                            setTtsEnabled(true);
+                        }}
+                        style={{
+                            position: 'absolute',
+                            zIndex: 10,
+                            top: 8,
+                            right: 8,
+                            padding: '8px 12px',
+                            borderRadius: 12,
+                            border: 'none',
+                            boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
+                            cursor: 'pointer'
+                        }}
+                        title="Enable speech"
+                    >
+                        🔊 Enable Speech
+                    </button>
+                )}
 
-            <Swiper
-                effect={'cards'}
-                grabCursor={true}
-                loop={true}
-                modules={[EffectCards]}
-                className="mySwiper"
-                onSwiper={(swiper) => (swiperRef.current = swiper)}
-                onSlideChange={(swiper) => {
-                    // small delay so realIndex is correct in loop mode
-                    setTimeout(() => {
-                        speakSlide(swiper.realIndex);
-                    }, 120);
-                }}
-            >
-                {vocabulary.map((item, index) => (
-                    <SwiperSlide key={index}>
-                        <div
-                            style={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                height: '260px',
-                                padding: 8,
-                                textAlign: 'center',
-                                fontSize: "11px"
-                            }}
-                            onClick={() => {
-                                // Tap to replay JP -> EN for this card
-                                speakSlide(swiperRef.current ? swiperRef.current.realIndex : index);
-                            }}
-                        >
-                            <img src={image} alt={item.japanese} className='img-fluid p-2' />
-                            <p style={{ fontSize: "1rem", marginTop: "10px", fontWeight: 700 }}>{item.japanese}</p>
-                            <p style={{ fontStyle: "italic", color: "#666" }}>{item.romaji}</p>
-                            <p>{item.english}</p>
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+                <Swiper
+                    effect={'cards'}
+                    grabCursor={true}
+                    loop={true}
+                    modules={[EffectCards]}
+                    className="mySwiper"
+                    onSwiper={(swiper) => (swiperRef.current = swiper)}
+                    onSlideChange={(swiper) => {
+                        // small delay so realIndex is correct in loop mode
+                        setTimeout(() => {
+                            speakSlide(swiper.realIndex);
+                        }, 120);
+                    }}
+                >
+                    {vocabulary.map((item, index) => (
+                        <SwiperSlide key={index}>
+                            <div
+                                style={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    height: '260px',
+                                    padding: 8,
+                                    textAlign: 'center',
+                                    fontSize: "11px"
+                                }}
+                                onClick={() => {
+                                    // Tap to replay JP -> EN for this card
+                                    speakSlide(swiperRef.current ? swiperRef.current.realIndex : index);
+                                }}
+                            >
+                                <img src={image} alt={item.japanese} className='img-fluid p-2' />
+                                <p style={{ fontSize: "1rem", marginTop: "10px", fontWeight: 700 }}>{item.japanese}</p>
+                                <p style={{ fontStyle: "italic", color: "#666" }}>{item.romaji}</p>
+                                <p>{item.english}</p>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
         </div>
     );
 };
