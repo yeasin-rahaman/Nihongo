@@ -20,6 +20,7 @@ function App() {
           <Route path="/katakana" element={<Katakana />} />
           <Route path="/hiragana" element={<Hiragana />} />
           <Route path="/v10" element={<Lession10Vocavolary />} />
+          <Route path="/v1" element={<Vocavolary1 />} />
 
         </Routes>
 
